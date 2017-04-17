@@ -20,21 +20,16 @@ Ant Design has 3 types Tabs for different situation.
 
 | Property     | Description           | Type     | Default      |
 |--------------|-----------------------|----------|--------------|
-| activeKey    | Current TabPane's key| string   | _             |
-| defaultActiveKey | Default actived tabPanel's key, if activeKey is not setted. | - |
-| onChange     | Callback when tab is switched | Function | - |
+| value    | Current TabPane's key,two-way binding | string   | _             |
 | onTabClick   | Callback when tab is clicked | Function | - |
-| tabBarExtraContent | Extra element in tab bar | React.ReactNode | - |
-| tabBarStyle  | tar bar style object           | object   | -        |
+| tabBarExtraContent | Extra element in tab bar | VNode | - |
 | type         | Basic style of tabs. Options: line, card & editable-card | string | line |
 | size         | Tab bar size. Options: default, small. Only works while `type="line"`. | string | default |
-| tabPosition  | Position of tabs. Options: top, right, bottom & left | string | top |
 | onEdit       | Callback when tab is added or removed, which is executing when set type as editable-card | (targetKey, action): void | - |
 | hideAdd      | Hide plus icon or not, which is effective when set type as editable-card | boolean | false |
-| animated | Whether to change tabs with animation, this property only works with `tabPosition=top|bottom` | boolean | true |
 
-### Tabs.TabPane
+### Tabs TabPane
 | Property     | Description           | Type     | Default      |
 |--------------|-----------------------|----------|--------------|
-| key          | TabPane's key         | string   | _            |
-| tab          | Show text in TabPane's head | string\|ReactNode | _ |
+| index          | TabPane's index         | string   | _            |
+| tab          | Show text in TabPane's head | string\|VNode | _ |

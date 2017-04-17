@@ -22,6 +22,4 @@ Rate component.
 | onHoverChange | callback when hover item | Function(value: number) | - |
 | allowHalf | whether to allow semi selection   | boolean | false |
 | disabled | read only, unable to interact | boolean | false |
-| character | custom character of rate | ReactNode | `<Icon type="star" />` |
-| className | custom class name of rate | string | - |
-| style | custom style object of rate | object | - |
+| character | custom character of rate | string | `<Icon type="star" />` |

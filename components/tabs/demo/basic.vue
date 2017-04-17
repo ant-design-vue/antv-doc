@@ -1,31 +1,21 @@
----
-order: 0
-title:
-  zh-CN: 基本
-  en-US: Basic
----
-
-## zh-CN
-
-默认选中第一项。
-
-## en-US
-
-Default activate first tab.
-
-````jsx
-import { Tabs } from 'antd';
-const TabPane = Tabs.TabPane;
-
-function callback(key) {
-  console.log(key);
-}
-
-ReactDOM.render(
-  <Tabs defaultActiveKey="1" onChange={callback}>
-    <TabPane tab="Tab 1" key="1">Content of Tab Pane 1</TabPane>
-    <TabPane tab="Tab 2" key="2">Content of Tab Pane 2</TabPane>
-    <TabPane tab="Tab 3" key="3">Content of Tab Pane 3</TabPane>
-  </Tabs>
-, mountNode);
-````
+<template>
+  <v-tabs v-model="activeIndex">
+    <v-tab-pane tab="Tab 1" index="1">Content of Tab Pane 1</v-tab-pane>
+    <v-tab-pane tab="Tab 2" index="2">Content of Tab Pane 2</v-tab-pane>
+    <v-tab-pane tab="Tab 3" index="3">Content of Tab Pane 3</v-tab-pane>
+  </v-tabs>
+</template>
+<script type="text/babel">
+  export default {
+    data() {
+      return {
+        activeIndex: '1'
+      }
+    },
+    methods: {
+      onTabClick(index) {
+        console.log(index)
+      }
+    }
+  }
+</script>

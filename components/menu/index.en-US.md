@@ -11,15 +11,15 @@ Menu list of Navigation.
 
 Navigation menu is important for a website, it helps users jump from one site section to another quickly. Mostly, it includes top navigation and side navigation. Top navigation provides all the category and functions of the website. Side navigation provides the Multi-level structure of the website.
 
-More layout and samples: [layout](/docs/spec/layout).
+More layout and samples: [layout](https://ant.design/docs/spec/layout-cn).
 
 ```html
-<Menu>
-  <Menu.Item>Menu</Menu.Item>
-  <SubMenu title="SubMenu">
-    <Menu.Item>SubMenuItem</Menu.Item>
-  </SubMenu>
-</Menu>
+<v-menu>
+  <v-menu-item>菜单项</v-menu-item>
+  <v-sub-menu title="子菜单">
+    <v-menu-item>子菜单项</v-menu-item>
+  </v-sub-menu>
+</v-menu>
 ```
 
 ## API
@@ -28,46 +28,30 @@ More layout and samples: [layout](/docs/spec/layout).
 
 | Param    | Description   | Type     | Default value       |
 |----------|---------------|----------|--------------|
-| theme    | color of the theme | string: `light` `dark` | `light` |
 | mode | type of the menu; vertical, horizontal, and inline modes are supported | string: vertical horizontal inline | vertical |
-| selectedKeys | array with the keys of currently selected menu items | string[] |      |
-| defaultSelectedKeys | array with the keys of default selected menu items | string[] |      |
-| openKeys | array with the keys of currently opened sub menus | string[] |  |
-| defaultOpenKeys | array with the keys of default opened sub menus |  |      |
-| onOpenChange | called when open/close sub menu | Function(openKeys: string[]) | noop |
-| onSelect | callback of the selected item | Function({ item, key, selectedKeys }) | none   |
-| onDeselect | callback of the deselected item, only supported for multiple mode | Function({ item, key, selectedKeys }) | - |
-| onClick | callback of the clicked menu item, params: {item, key, keyPath} | function | - |
-| style | style of the root node | object | |
-| inlineIndent | indent px of inline menu item on each level | number | 24 |
-| multiple | Allow select multiple item | boolean | false |
+| defaultSelectedIndex | the index of default selected menu item | string |      |
+| activeIndex | the index of currently active sub menus | string |  |
+| uniqueOpened | whether only one sub-menu can be active | boolean |  `false`   |
+| onOpenChange | called when open/close sub menu | Function(openIndexs: string[]) | noop |
+| onSelect | callback of the selected item | Function({ item, selectedIndex }) | none   |
 
-> More options in [rc-menu](https://github.com/react-component/menu#api)
-
-### Menu.Item props
+### Menu Item props
 
 | Param    | Description    | Type     | Default value       |
 |----------|----------------|----------|--------------|
 | disabled    | disabled or not | boolean   |  false  |
-| key   | unique id of the menu item |  string |  |
+| index   | unique id of the menu item |  string |  |
 
-### Menu.SubMenu props
+### Menu SubMenu props
 
 | Param    | Description    | Type     | Default value       |
 |----------|----------------|----------|--------------|
 | disabled    | disabled or not | boolean   |  false  |
-| key   | unique id of the menu item |  string |  |
-| title    | title of the sub menu | string\|ReactNode   |    |
-| children | sub menus or sub menu items | Arrat<MenuItem\|SubMenu> |  |
-| onTitleClick | callback of the clicked sub menu title | Function({ eventKey, domEvent }) |  |
+| index   | unique id of the menu item |  string |  |
+| title    | title of the sub menu | string\|slot:title   |    |
 
-### Menu.ItemGroup props
+### Menu ItemGroup props
 
 | Param    | Description    | Type     | Default value       |
 |----------|----------------|----------|--------------|
-| title    | title of the group       | string\|ReactNode |    |
-| children | sub menu items    | MenuItem[] |  |
-
-### Menu.Divider
-
-divider line in between menu items, only used in vertical popup Menu or Dropdown Menu.
+| title    | title of the group       | string\|slot:title |    |

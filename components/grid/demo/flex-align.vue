@@ -1,19 +1,72 @@
 <template>
   <section>
-    <v-row>
-      <v-col :span="12">col-12</v-col>
-      <v-col :span="12">col-12</v-col>
+    <p>Align Top</p>
+    <v-row type="flex" justify="center" align="top">
+      <v-col :span="4">
+        <demo-box value="100">col-4</demo-box>
+      </v-col>
+      <v-col :span="4">
+        <demo-box value="50">col-4</demo-box>
+      </v-col>
+      <v-col :span="4">
+        <demo-box value="120">col-4</demo-box>
+      </v-col>
+      <v-col :span="4">
+        <demo-box value="80">col-4</demo-box>
+      </v-col>
     </v-row>
-    <v-row>
-      <v-col :span="8">col-8</v-col>
-      <v-col :span="8">col-8</v-col>
-      <v-col :span="8">col-8</v-col>
+
+    <p>Align Center</p>
+    <v-row type="flex" justify="space-around" align="middle">
+      <v-col :span="4">
+        <demo-box value="100">col-4</demo-box>
+      </v-col>
+      <v-col :span="4">
+        <demo-box value="50">col-4</demo-box>
+      </v-col>
+      <v-col :span="4">
+        <demo-box value="120">col-4</demo-box>
+      </v-col>
+      <v-col :span="4">
+        <demo-box value="80">col-4</demo-box>
+      </v-col>
     </v-row>
-    <v-row>
-      <v-col :span="6">col-6</v-col>
-      <v-col :span="6">col-6</v-col>
-      <v-col :span="6">col-6</v-col>
-      <v-col :span="6">col-6</v-col>
+
+    <p>Align Bottom</p>
+    <v-row type="flex" justify="space-between" align="bottom">
+      <v-col :span="4">
+        <demo-box value="100">col-4</demo-box>
+      </v-col>
+      <v-col :span="4">
+        <demo-box value="50">col-4</demo-box>
+      </v-col>
+      <v-col :span="4">
+        <demo-box value="120">col-4</demo-box>
+      </v-col>
+      <v-col :span="4">
+        <demo-box value="80">col-4</demo-box>
+      </v-col>
     </v-row>
   </section>
 </template>
+<script type="text/babel">
+  export default {
+    components: {
+      DemoBox: {
+        props: {
+          value: String
+        },
+        render(createElement) {
+          return createElement(
+            'p',
+            {
+              'class': {
+                [`height-${this.value}`]: this.value,
+              }
+            },
+            this.$slots.default)
+        }
+      }
+    }
+  }
+</script>

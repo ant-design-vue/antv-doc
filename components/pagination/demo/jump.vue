@@ -1,8 +1,17 @@
 <template>
-  <section>
-    <v-button type="primary">Primary</v-button>
-    <v-button>Default</v-button>
-    <v-button type="dashed">Dashed</v-button>
-    <v-button type="danger">Danger</v-button>
-  </section>
+  <v-pagination showQuickJumper :total="500" v-model="model" @onChange="onChange"></v-pagination>
 </template>
+<script>
+  export default {
+    data() {
+      return {
+        model: 2
+      }
+    },
+    methods: {
+      onChange(page) {
+        console.log(page)
+      }
+    }
+  }
+</script>

@@ -17,24 +17,5 @@ A breadcrumb displays the current location within a hierarchy. It allows going b
 
 | Property      | Description                              | Type              |  Optional | Default |
 |-----------|-----------------------------------|-----------------|---------|--------|
-| routes    | The routing stack information of router | object[]             |         | -      |
-| params    | Routing parameter                        | object            |         | -      |
+| autoRoute | Set to ture will automatically generate breadcrumbs based on $route of vue-route | boolean |        |    `false`     |
 | separator | Custom separator                      | string\|ReactNode |         | '/'    |
-| itemRender | Custom item renderer | (route, params, routes, paths) => ReactNode | | - |
-
-> `linkRender` and `nameRender` were removed after `antd@2.0`, please use `itemRender` instead.
-
-### Use with browserHistory
-
-The link of Breadcrumb item contain `#` defaultly, you can use `itemRender` to make `browserHistory` Link.
-
-```jsx
-import { Link } from 'react-router';
-
-function itemRender(route, params, routes, paths) {
-  const last = routes.indexOf(route) === routes.length - 1;
-  return last ? <span>{route.breadcrumbName}</span> : <Link to={paths.join('/')}>{route.breadcrumbName}</Link>;
-}
-
-return <Breadcrumb itemRender={itemRender} />;
-```

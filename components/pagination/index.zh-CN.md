@@ -13,18 +13,17 @@ cols: 1
 - 当加载/渲染所有数据将花费很多时间时；
 - 可切换页码浏览数据。
 
+```html
+<v-pagination :total="50" v-model="model"></v-pagination>
+```
+
 ## API
 
-```html
-<Pagination onChange={onChange} total={50} />
-```
 
 | 参数             | 说明                               | 类型          | 默认值                   |
 |------------------|------------------------------------|---------------|--------------------------|
-| current          | 当前页数                           | number        | -                   |
-| defaultCurrent   | 默认的当前页数                     | number        | 1                        |
+| value          | 当前页数，双向绑定                           | number        | -                   |
 | total            | 数据总数                           | number        | 0                        |
-| defaultPageSize  | 默认的每页条数                      | number        | 10                       |
 | pageSize         | 每页条数                           | number        | -                         |
 | onChange         | 页码改变的回调，参数是改变后的页码及每页条数 | Function(page, pageSize)      | noop                     |
 | showSizeChanger  | 是否可以改变 pageSize              | boolean        | false                    |

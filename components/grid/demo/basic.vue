@@ -1,8 +1,19 @@
 <template>
   <section>
-    <v-button type="primary">Primary</v-button>
-    <v-button>Default</v-button>
-    <v-button type="dashed">Dashed</v-button>
-    <v-button type="danger">Danger</v-button>
+    <v-row>
+      <v-col :span="12">col-12</v-col>
+      <v-col :span="12">col-12</v-col>
+    </v-row>
+    <v-row>
+      <v-col :span="8">col-8</v-col>
+      <v-col :span="8">col-8</v-col>
+      <v-col :span="8">col-8</v-col>
+    </v-row>
+    <v-row>
+      <v-col :span="6">col-6</v-col>
+      <v-col :span="6">col-6</v-col>
+      <v-col :span="6">col-6</v-col>
+      <v-col :span="6">col-6</v-col>
+    </v-row>
   </section>
 </template>

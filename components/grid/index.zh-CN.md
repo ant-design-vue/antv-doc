@@ -80,11 +80,6 @@ Flex 布局是基于 24 栅格来定义每一个『盒子』的宽度，但排�
 
 ## API
 
-Ant Design 的布局组件若不能满足你的需求，你也可以直接使用社区的优秀布局组件：
-
-- [react-flexbox-grid](http://roylee0704.github.io/react-flexbox-grid/)
-- [react-blocks](http://whoisandie.github.io/react-blocks/)
-
 ### Row
 
 | 成员       | 说明             | 类型               | 默认值       |
@@ -103,10 +98,3 @@ Ant Design 的布局组件若不能满足你的需求，你也可以直接使用
 | offset   | 栅格左侧的间隔格数，间隔内不可以有栅格  | number | 0        |
 | push     | 栅格向右移动格数   | number | 0        |
 | pull     | 栅格向左移动格数   | number | 0        |
-| xs       | `<768px` 响应式栅格，可为栅格数或一个包含其他属性的对象 | number\|object | - |
-| sm       | `≥768px` 响应式栅格，可为栅格数或一个包含其他属性的对象 | number\|object | - |
-| md       | `≥992px` 响应式栅格，可为栅格数或一个包含其他属性的对象 | number\|object | - |
-| lg       | `≥1200px` 响应式栅格，可为栅格数或一个包含其他属性的对象 | number\|object | - |
-| xl       | `≥1600px` 响应式栅格，可为栅格数或一个包含其他属性的对象 | number\|object | - |
-
-响应式栅格的断点遵循了 [BootStrap 3 的规则](http://getbootstrap.com/css/#grid-media-queries)（不包含链接里 `occasionally` 的部分)。
