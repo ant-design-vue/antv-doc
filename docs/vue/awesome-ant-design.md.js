@@ -1,0 +1,1 @@
+webpackJsonp([11,43],{561:function(e,t){e.exports={content:["article"],meta:{order:9,title:"Awesome Ant Design",link:"https://github.com/websemantics/awesome-ant-design",filename:"docs/vue/awesome-ant-design.md"},toc:["ul"]}}});
