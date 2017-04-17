@@ -13,12 +13,12 @@ class Footer extends React.Component {
     // 大版本发布后全局弹窗提示
     //   1. 点击『知道了』之后不再提示
     //   2. 超过截止日期后不再提示
-    if (
-      localStorage.getItem('antd@2.0.0-notification-sent') !== 'true' &&
-        Date.now() < new Date('2016/10/14').getTime()
-    ) {
-      this.infoNewVersion();
-    }
+    // if (
+    //   localStorage.getItem('antd@2.0.0-notification-sent') !== 'true' &&
+    //     Date.now() < new Date('2016/10/14').getTime()
+    // ) {
+    //   this.infoNewVersion();
+    // }
   }
 
   infoNewVersion() {
@@ -52,13 +52,8 @@ class Footer extends React.Component {
           <li>
             <h2><Icon type="github" /> GitHub</h2>
             <div>
-              <a target="_blank " href="https://github.com/ant-design/ant-design">
+              <a target="_blank " href="https://github.com/ant-design-vue/antv">
                 <FormattedMessage id="app.footer.repo" />
-              </a>
-            </div>
-            <div>
-              <a target="_blank " href="https://ant.design/docs/vue/customize-theme">
-                <FormattedMessage id="app.footer.customize-theme" />
               </a>
             </div>
             <div>
@@ -70,31 +65,9 @@ class Footer extends React.Component {
           <li>
             <h2><Icon type="link" /> <FormattedMessage id="app.footer.links" /></h2>
             <div>
-              <a href="http://mobile.ant.design">Ant Design Mobile</a>
+              <a href="http://ant.design">Ant Design</a>
               <span> - </span>
-              <FormattedMessage id="app.footer.mobile" />
-            </div>
-            <div>
-              <a target="_blank" rel="noopener noreferrer" href="https://github.com/dvajs/dva">dva</a> - <FormattedMessage id="app.footer.dva" />
-            </div>
-            <div>
-              <a target="_blank" rel="noopener noreferrer" href="https://github.com/dvajs/dva-cli">dva-cli</a> -
-              <FormattedMessage id="app.footer.dev-tools" />
-            </div>
-            <div>
-              <a target="_blank" rel="noopener noreferrer" href="https://eggjs.org/">Egg</a>
-              <span> - </span>
-              <FormattedMessage id="app.footer.eggjs" />
-            </div>
-            <div>
-              <a target="_blank" rel="noopener noreferrer" href="https://antv.alipay.com/">AntV</a>
-              <span> - </span>
-              <FormattedMessage id="app.footer.data-vis" />
-            </div>
-            <div>
-              <a target="_blank" rel="noopener noreferrer" href="http://motion.ant.design">Ant Motion</a>
-              <span> - </span>
-              <FormattedMessage id="app.footer.motion" />
+              Ant Design
             </div>
             <div>
               <a target="_blank" rel="noopener noreferrer" href="http://library.ant.design/">AntD Library</a>
@@ -114,36 +87,13 @@ class Footer extends React.Component {
                 <FormattedMessage id="app.footer.change-log" />
               </a>
             </div>
-            <div>
-              <a target="_blank" rel="noopener noreferrer" href="https://github.com/ant-design/ant-design/wiki/FAQ">
-                <FormattedMessage id="app.footer.faq" />
-              </a>
-            </div>
-            <div>
-              <a target="_blank" rel="noopener noreferrer" href="https://gitter.im/ant-design/ant-design">
-                <FormattedMessage id="app.footer.discuss" />
-              </a>
-            </div>
-            <div>
-              <a target="_blank" rel="noopener noreferrer" href="https://github.com/ant-design/ant-design/issues/new">
-                <FormattedMessage id="app.footer.bug-report" />
-              </a>
-            </div>
-            <div>
-              <a target="_blank" rel="noopener noreferrer" href="http://stackoverflow.com/questions/tagged/antd">
-                <FormattedMessage id="app.footer.stackoverflow" />
-              </a>
-            </div>
-            <div>
-              <a target="_blank" rel="noopener noreferrer" href="https://segmentfault.com/t/antd">
-                <FormattedMessage id="app.footer.segmentfault" />
-              </a>
-            </div>
           </li>
           <li>
             <h2>Copyright © {new Date().getFullYear()}</h2>
             <div>
-              <FormattedMessage id="app.footer.author" />
+              <a target="_blank" rel="noopener noreferrer" href="https://github.com/flashhk">
+                @flashhk
+              </a>
             </div>
             <div>
               Built with&nbsp;

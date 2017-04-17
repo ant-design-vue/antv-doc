@@ -24,18 +24,21 @@
   "homepage": "https://github.com/ant-design-vue/antv-doc#readme",
   "scripts": {
     "start": "bisheng start -c ./site/bisheng.config.js",
-    "site": "npm run site:babel && bisheng build --ssr -c ./site/bisheng.config.js && npm run site:clean",
+    "site": "bisheng build -c ./site/bisheng.config.js",
     "site:babel": "babel ./site/theme/template --out-dir ./site/theme/template",
-    "site:clean": "rimraf site/theme/template/**/*.js site/theme/template/*.js"
+    "site:clean": "rimraf site/theme/template/**/*.js site/theme/template/*.js",
+    "deploy": "antd-tools run clean && npm run site && bisheng gh-pages --push-only"
   },
   "dependencies": {
     "vue": "^2.2.0",
     "antv": "latest",
     "antd": "^1.6.3",
-    "antd-tools": "^0.10.0"
+    "antd-tools": "^0.10.0",
+    "babel-runtime": "6.x"
   },
   "devDependencies": {
     "autoprefixer": "^6.4.0",
+    "babel-cli": "^6.18.0",
     "babel-core": "^6.0.0",
     "babel-eslint": "^7.0.0",
     "babel-loader": "^6.0.0",

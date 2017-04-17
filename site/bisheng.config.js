@@ -2,6 +2,7 @@ const path = require('path');
 
 module.exports = {
   port: 8001,
+  root: '/antv-doc/',
   source: {
     components: './components',
     docs: './docs'
