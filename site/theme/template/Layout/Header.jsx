@@ -192,9 +192,6 @@ export default class Header extends React.Component {
                 onSearch={this.handleInputChange}
                 getPopupContainer={trigger => trigger.parentNode}
               >
-                <Option value={searchEngine} data-label={searchEngine}>
-                  <FormattedMessage id="app.header.search" />
-                </Option>
                 {options}
               </Select>
             </div>

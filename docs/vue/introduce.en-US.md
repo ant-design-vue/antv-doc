@@ -22,7 +22,7 @@ Following the Ant Design specification, we developed a Vue UI library `antv` tha
 ## Features
 
 - An enterprise-class UI design language for web applications.
-- A high-quality Vue components based on superior Ant design.
+- A high-quality Vue components based on superior [Ant Design](https://ant.design).
 - A npm + webpack + babel + [Vue2.0](https://vuejs.org) front-end development workflow.
 
 ## Environment Support

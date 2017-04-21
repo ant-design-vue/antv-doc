@@ -22,7 +22,7 @@ title: Ant Design of Vue
 ## 特性
 
 - 提炼自企业级中后台产品的交互语言和视觉风格。
-- 基于卓越的 Ant Design 实现的高质量 Vue 组件。
+- 基于卓越的 [Ant Design](https://ant.design) 实现的高质量 Vue 组件。
 - 基于 npm + webpack + babel + [Vue2.0](https://vuejs.org) 的工作流。
 
 ## 支持环境
