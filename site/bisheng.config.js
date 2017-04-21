@@ -48,7 +48,7 @@ module.exports = {
       site: path.join(process.cwd(), 'site'),
       'react-router': 'react-router/umd/ReactRouter',
       'vue$': 'vue/dist/vue',
-      'antv': '/Users/ak/work/js/antv-dev'
+      // 'antv': '/Users/ak/work/js/antv-dev'
     };
 
     config.babel.plugins.push([

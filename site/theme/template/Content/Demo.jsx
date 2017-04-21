@@ -7,16 +7,14 @@ import { Icon, Tooltip } from 'antd';
 import EditButton from './EditButton';
 import BrowserFrame from '../BrowserFrame';
 import Vue from 'vue'
-import VueRouter from 'vue-router'
 
 import Antv from 'antv/dist/antv.js'
 import 'antv/dist/antv.css'
 
 Vue.use(Antv)
-Vue.use(VueRouter)
 
 
-
+let vueComponents = []
 
 export default class Demo extends React.Component {
   static contextTypes = {
@@ -59,7 +57,7 @@ export default class Demo extends React.Component {
     if (preview){
       preview().then((vm) => {
         var DemoVM = Vue.extend(vm)
-        new DemoVM().$mount(document.getElementById(meta.id + '-vue'))
+        vueComponents.push(new DemoVM().$mount(document.getElementById(meta.id + '-vue')))
       })
     }
   }
@@ -90,6 +88,12 @@ export default class Demo extends React.Component {
   }
 
   render() {
+    if (vueComponents.length > 0) {
+      vueComponents.forEach((component) => {
+        component.$destroy()
+      })
+      vueComponents = []
+    }
     const state = this.state;
     const props = this.props;
     const {
