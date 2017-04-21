@@ -1,1 +1,1 @@
-webpackJsonp([27,91],{673:function(e,t){e.exports={content:["article"],meta:{order:9,title:"Awesome Ant Design",link:"https://github.com/websemantics/awesome-ant-design",filename:"docs/vue/awesome-ant-design.md"},toc:["ul"]}}});
+webpackJsonp([27,91],{632:function(e,t){e.exports={content:["article"],meta:{order:9,title:"Awesome Ant Design",link:"https://github.com/websemantics/awesome-ant-design",filename:"docs/vue/awesome-ant-design.md"},toc:["ul"]}}});
