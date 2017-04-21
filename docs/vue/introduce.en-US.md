@@ -71,7 +71,7 @@ new Vue({
 ## Links
 
 - [Antd](http://ant.design/)
-- [Element UI](http://element.eleme.io)（优秀的 vue 组件库）
+- [Element UI](http://element.eleme.io)
 - [UI library](/docs/Vue/introduce)
 - [Design Code Quick Guide](https://github.com/ant-design/ant-design/wiki/Ant-Design-%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80%E7%AE%80%E7%89%88)
 - [Awesome Ant Design](https://github.com/websemantics/awesome-ant-design)
