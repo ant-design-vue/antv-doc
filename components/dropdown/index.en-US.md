@@ -19,4 +19,4 @@ If there are too many operations to display, you can wrap them in a `Dropdown`. 
 
 ### Dropdown Menu Item
 
-Consult [Menu's documentation] (／components/menu/#API) to find more APIs.
+Consult [Menu's documentation](／components/menu/#API) to find more APIs.
